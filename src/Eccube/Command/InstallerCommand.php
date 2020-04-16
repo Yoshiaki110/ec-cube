@@ -223,7 +223,6 @@ class InstallerCommand extends Command
         $commands = [
             'doctrine:database:create'.$ifNotExists,
             'doctrine:schema:drop --force',
-            'eccube:fixtures:load',
             'cache:clear --no-warmup',
         ];
 

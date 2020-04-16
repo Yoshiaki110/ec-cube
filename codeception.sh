@@ -11,7 +11,6 @@ if [[ $1 == '--reset' ]]; then
     git checkout composer.json composer.lock
     composer install --dev --no-interaction -o --apcu-autoloader
     bin/console doctrine:schema:drop --force --full-database --env=dev
-    bin/console eccube:fixtures:load --env=dev
     exit
 fi
 
