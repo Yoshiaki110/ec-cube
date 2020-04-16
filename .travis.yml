@@ -50,7 +50,6 @@ before_install: &php_setup |
 
 eccube_setup: &eccube_setup |
   bin/console doctrine:database:create --env=dev
-  bin/console doctrine:schema:create --env=dev
   bin/console eccube:fixtures:load --env=dev
 
 package_api_setup: &package_api_setup |

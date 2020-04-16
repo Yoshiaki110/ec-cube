@@ -139,7 +139,6 @@
     },
     "scripts": {
         "compile": {
-            "doctrine:schema:create": "bin/console doctrine:schema:create",
             "eccube:fixtures:load": "bin/console eccube:fixtures:load"
         },
         "auto-scripts": {
@@ -149,7 +148,6 @@
         },
         "installer-scripts": {
             "doctrine:database:create": "bin/console doctrine:database:create",
-            "doctrine:schema:create": "bin/console doctrine:schema:create",
             "eccube:fixtures:load": "bin/console eccube:fixtures:load"
         },
         "post-install-cmd": [

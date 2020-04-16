@@ -65,7 +65,6 @@ build: off
 
 before_test:
   - php bin\console doctrine:database:create
-  - php bin\console doctrine:schema:create
   - php bin\console eccube:fixtures:load
 
 test_script:

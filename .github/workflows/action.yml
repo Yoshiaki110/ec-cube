@@ -76,7 +76,6 @@ jobs:
         DATABASE_SERVER_VERSION: ${{ matrix.database_server_version }}
       run: |
         bin/console doctrine:database:create
-        bin/console doctrine:schema:create
         bin/console eccube:fixtures:load
 
     - name: PHPUnit
@@ -170,7 +169,6 @@ jobs:
       run: |
         echo "APP_ENV=${APP_ENV}" > .env
         bin/console doctrine:database:create --env=dev
-        bin/console doctrine:schema:create --env=dev
         bin/console eccube:fixtures:load --env=dev
 
     - name: setup-chromedriver
@@ -277,7 +275,6 @@ jobs:
       run: |
         echo "APP_ENV=${APP_ENV}" > .env
         bin/console doctrine:database:create --env=dev
-        bin/console doctrine:schema:create --env=dev
         bin/console eccube:fixtures:load --env=dev
 
     - name: Update baseinfo with pgsql
@@ -402,7 +399,6 @@ jobs:
       run: |
         echo "APP_ENV=${APP_ENV}" > .env
         bin/console doctrine:database:create --env=dev
-        bin/console doctrine:schema:create --env=dev
         bin/console eccube:fixtures:load --env=dev
 
     - name: Update baseinfo with pgsql
@@ -527,7 +523,6 @@ jobs:
       run: |
         echo "APP_ENV=${APP_ENV}" > .env
         bin/console doctrine:database:create --env=dev
-        bin/console doctrine:schema:create --env=dev
         bin/console eccube:fixtures:load --env=dev
 
     - name: Update baseinfo with pgsql
@@ -654,7 +649,6 @@ jobs:
       run: |
         echo "APP_ENV=${APP_ENV}" > .env
         bin/console doctrine:database:create --env=dev
-        bin/console doctrine:schema:create --env=dev
         bin/console eccube:fixtures:load --env=dev
 
     - name: Update baseinfo with pgsql
